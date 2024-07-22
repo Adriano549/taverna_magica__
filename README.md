@@ -14,20 +14,20 @@ Bem-vindo ao Taverna Mágica, um projeto de portfólio front-end que simula um s
 
 * Índice
 * Visão Geral
-* Funcionalidades
-* Tecnologias Utilizadas
+- [Funcionalidades](#funcionalidades)
+- [Tecnologias Utilizadas](#tecnologias-utilizadas)
 
 ## Visão Geral
 O Taverna Mágica é um projeto de e-commerce fictício que vende produtos de um mundo de fantasia, como poções mágicas, varinhas, artefatos encantados e muito mais. A experiência do usuário foi cuidadosamente projetada para imitar um site de e-commerce real, mas com um toque mágico.
 
-Funcionalidades:
+## Funcionalidades:
 
 * Catálogo de produtos mágicos
 * Seleção de opções de frete, incluindo frete grátis
 * Carrinho de compras dinâmico
 * Design responsivo e intuitivo
 
-Este projeto foi desenvolvido utilizando as seguintes tecnologias:
+## Tecnologias Utilizadas
 
 * HTML: Estruturação do conteúdo.
 * CSS: Estilização e layout.
