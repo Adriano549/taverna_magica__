@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react"
-import formatPriceBR from "../../../reutilizavel/formatiPrice";
-import styled from "styled-components";
+import formatPriceBR from "../../../../reutilizavel/formatiPrice";
+import { Container, AvisoJuros, Options , SelectOption } from "./styledParcelamento";
 
 
 const Parcelamentos = ({ valorCompra }) => {
+    const taxaJuros = 0.015;
+
     const [parcelas] = useState(() => {
         const novasParcelas = [];
         const desconto = valorCompra * 0.1
@@ -15,7 +17,13 @@ const Parcelamentos = ({ valorCompra }) => {
         });
 
         for (let numeroParcelas = 2; numeroParcelas <= 12; numeroParcelas++) {
-            const valorParcela = valorCompra / numeroParcelas;
+            let valorParcela;
+            if (numeroParcelas >= 9) {
+                const valorComJuros = valorCompra * Math.pow(1 + taxaJuros, numeroParcelas - 1);
+                valorParcela = valorComJuros / numeroParcelas;
+            } else {
+                valorParcela = valorCompra / numeroParcelas;
+            }
             novasParcelas.push({
                 numeroParcelas,
                 valorParcela,
@@ -50,40 +58,14 @@ const Parcelamentos = ({ valorCompra }) => {
                     )
                     )}
                 </SelectOption>
+            )} {parcelaSelecionada >= 9 && (
+                <AvisoJuros>
+                    Atenção: Parcelas a partir da 9ª incluem juros de 1.5% ao mês.
+                </AvisoJuros>
             )}
         </Container>
     );
 };
 
 export default Parcelamentos;
-
-const Container = styled.div`
-    text-align: center;
-    h2{
-        margin:5px;
-        font-size: 22px;
-    }
-`
-
-const SelectOption = styled.select`
-    margin-bottom: 10px;
-    padding: 5px;
-    border-radius: 10px;
-    border: 1px solid #b964b5;
-    cursor: pointer;
-    color: #592c5e;
-    font-size: 14px;
-    :hover{
-        border: 1px solid #65276b;
-    }
-
-`
-const Options = styled.option`
-    color: #592c5e;
-    background-color: #ffffff;
-    border: none;
-    text-align: center;
-    
-`
-
 

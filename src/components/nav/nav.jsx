@@ -16,7 +16,7 @@ const Header = () => {
     return (
         <Container>
             <DivLogo>
-                <img src={Logo} alt="" />
+                <img src={Logo}  alt="Logo do site" onClick={() => navigate("/")}/>
             </DivLogo>
             <div>
                 <nav style={pagamentoStyle}>
@@ -103,7 +103,7 @@ const DivLogo = styled.div`
         border-radius: 50%;
         border: outset #000000  2px;
         width: 130px;
-        
+        cursor: pointer;
     }
 `
 
