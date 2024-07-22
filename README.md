@@ -12,8 +12,8 @@ Currently, two official plugins are available:
 
 Bem-vindo ao Taverna Mágica, um projeto de portfólio front-end que simula um site de e-commerce com produtos fictícios de um mundo de fantasia. Aqui, produtos mágicos são vendidos como se fossem reais. Este projeto foi desenvolvido utilizando HTML, CSS, JavaScript e React, junto com várias bibliotecas do React.
 
-* Índice
-* Visão Geral
+## Índice
+- [Visão Geral](#visão-geral)
 - [Funcionalidades](#funcionalidades)
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
 
