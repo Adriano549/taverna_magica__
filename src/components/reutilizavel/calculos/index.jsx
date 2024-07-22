@@ -44,13 +44,13 @@ const useCarrinhoCalculations = (carrinho, cep) => {
         if (cep.length === 8) {
             const firstDigit = cep.charAt(0);
             if (firstDigit === "1" || firstDigit === "2" || firstDigit === "3") {
-                opcoes.push({ nome: "Padrão", valor: totalCarrinho >= 299 ? 0 : 10 });
-                opcoes.push({ nome: "Expresso", valor: 20 });
-                opcoes.push({ nome: "portal", valor: 100 });
+                opcoes.push({ nome: "Padrão", valor: totalCarrinho >= 299 ? 0 : 10 , entrega: "Entrega 4 - 7 dias"});
+                opcoes.push({ nome: "Expresso", valor: 20 , entrega: "Entrega 2 - 4 dias"});
+                opcoes.push({ nome: "portal", valor: 100 , entrega: "Entrega feita no mesmo dia"});
             } else {
-                opcoes.push({ nome: "Padrão", valor: totalCarrinho >= 299 ? 0 : 15 });
-                opcoes.push({ nome: "Expresso", valor: 30 });
-                opcoes.push({ nome: "portal", valor: 100 });
+                opcoes.push({ nome: "Padrão", valor: totalCarrinho >= 299 ? 0 : 15 , entrega: "Entrega 4 - 7 dias"});
+                opcoes.push({ nome: "Expresso", valor: 30 , entrega: "Entrega 2 - 4 dias"});
+                opcoes.push({ nome: "portal", valor: 100 , entrega: "Entrega feita no mesmo dia"});
             }
         }
         return opcoes;

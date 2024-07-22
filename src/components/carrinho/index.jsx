@@ -13,7 +13,7 @@ const CarrinhoProdutos = () => {
     const navigate = useNavigate();
     const { carrinhoComQuantidade, totalCarrinho, opcoesFrete, freteSelecionado, setFreteSelecionado, precoComDesconto, parcelaSemJuros } = useCarrinhoCalculations(carrinho, cep);
     const [numeroResidencia, setNumeroResidencia] = useState("");
-
+console.log(opcoesFrete);
     const handleAddMore = (itemId) => {
         adicionarAoCarrinho(itemId);
     };
@@ -69,8 +69,8 @@ const CarrinhoProdutos = () => {
             </section>
             <ResumoPedido>
                 <h2>Resumo do Pedido</h2>
-                <p>Total: R$ {formatPriceBR(totalCarrinho + freteSelecionado)}</p>
-                <p>Frete: {formatPriceBR(freteSelecionado)}</p>
+                <p>Total:{formatPriceBR(totalCarrinho + freteSelecionado)}</p>
+                <p>Frete: {formatPriceBR(freteSelecionado)} </p>
                 <p>Pagamento no pix temos 15% de desconto</p>
                 <p>Total no pix: {formatPriceBR(precoComDesconto)}</p>
                 <p>Parcelamento até 8x sem juros {formatPriceBR(parcelaSemJuros)}</p>
@@ -91,10 +91,9 @@ const CarrinhoProdutos = () => {
                 </InputCep>
                 <label>Escolha o frete:</label>
                 <select value={freteSelecionado} onChange={handleFreteChange}>
-                    
                     {opcoesFrete.map((opcao, index) => (
                         <option key={index} value={opcao.valor}>
-                            {opcao.nome} - {formatPriceBR(opcao.valor)}
+                            {opcao.nome}-{formatPriceBR(opcao.valor)}-{opcao.entrega}
                         </option>
                     ))}
                 </select>

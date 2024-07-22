@@ -7,7 +7,7 @@ const Produtos = () => {
         <>
         <Beneficios>
             <div>
-                <h2><Coins />Freet Gratis</h2>
+                <h2><Coins />Frete Gratis</h2>
                 <p>Acima de R$299</p>
             </div>
             <div>
