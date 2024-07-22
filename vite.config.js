@@ -4,6 +4,6 @@ import react from '@vitejs/plugin-react'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base:"taverna_magica__",
-  plugins: [react()]
+  plugins: [react()],
+  base:"taverna_magica__"
 })
