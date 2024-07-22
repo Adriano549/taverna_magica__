@@ -9,6 +9,7 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 =======
 # taverna_magica
+![Logo do site](./src/img/Logo.png)
 
 Bem-vindo ao Taverna Mágica, um projeto de portfólio front-end que simula um site de e-commerce com produtos fictícios de um mundo de fantasia. Aqui, produtos mágicos são vendidos como se fossem reais. Este projeto foi desenvolvido utilizando HTML, CSS, JavaScript e React, junto com várias bibliotecas do React.
 
@@ -20,12 +21,16 @@ Bem-vindo ao Taverna Mágica, um projeto de portfólio front-end que simula um s
 ## Visão Geral
 O Taverna Mágica é um projeto de e-commerce fictício que vende produtos de um mundo de fantasia, como poções mágicas, varinhas, artefatos encantados e muito mais. A experiência do usuário foi cuidadosamente projetada para imitar um site de e-commerce real, mas com um toque mágico.
 
+![Um pouco da home do site](./src/img/reamd/site.png)
+
 ## Funcionalidades:
 
 * Catálogo de produtos mágicos
 * Seleção de opções de frete, incluindo frete grátis
 * Carrinho de compras dinâmico
 * Design responsivo e intuitivo
+
+![Um pouco da funcionalidade](./src/img/reamd/projeto-funcionando.gif)
 
 ## Tecnologias Utilizadas
 
